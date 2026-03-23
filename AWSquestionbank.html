@@ -40,6 +40,37 @@
         
         @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .cache-notice { background: #e3f2fd; color: #0d47a1; padding: 10px; border-radius: 5px; margin-bottom: 15px; font-size: 0.9rem; display: flex; justify-content: space-between; align-items: center; }
+/* --- 手机端适配优化 --- */
+        @media (max-width: 600px) {
+            /* 1. 工具栏改为上下两行排列 */
+            .toolbar {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 15px;
+                padding: 15px;
+            }
+            /* 2. 第一行：题号输入框居中对齐 */
+            .jump-box {
+                justify-content: center;
+                width: 100%;
+            }
+            /* 3. 第二行：按钮容器占满宽度 */
+            .toolbar > div:nth-child(2) {
+                width: 100%;
+                justify-content: space-between;
+            }
+            /* 4. 优化按钮尺寸：平分宽度、禁止文字换行 */
+            .toolbar button {
+                flex: 1;
+                padding: 10px 0;
+                font-size: 0.95rem;
+                white-space: nowrap;
+            }
+            /* 适当缩小输入框，让整体更协调 */
+            .jump-input {
+                width: 55px; 
+            }
+        }
     </style>
 </head>
 <body>
