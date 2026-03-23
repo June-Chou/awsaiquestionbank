@@ -9,7 +9,7 @@
         :root { --aws-orange: #FF9900; --aws-black: #232F3E; --bg-gray: #f4f4f4; --white: #ffffff; --success: #2ed573; --error: #ff4757; }
         body { font-family: "Segoe UI", Arial, sans-serif; background: var(--bg-gray); margin: 0; padding: 0; line-height: 1.6; }
         .container { max-width: 850px; margin: 0 auto; padding: 15px; }
-        header { background: var(--aws-Black); color: white; padding: 1rem; text-align: center; border-bottom: 5px solid var(--aws-orange); }
+        header { background: var(--aws-black); color: white; padding: 1rem; text-align: center; border-bottom: 5px solid var(--aws-orange); }
         header h1 { margin: 0; font-size: 1.5rem;}
         
         .toolbar { display: flex; justify-content: space-between; align-items: center; background: white; padding: 12px 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.06); gap: 10px;}
@@ -295,7 +295,7 @@
                 div.onclick = () => this.toggle(opt.label, div);
                 ob.appendChild(div);
             });
-            document.getElementById('btn-submit').disabled = false; document.getElementById('btn-prev').disabled = this.index === 0; document.getElementById('btn-next').disabled = this.index === data.length - 1; window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.getElementById('btn-submit').disabled = false; document.getElementById('btn-prev').disabled = this.index === 0; document.getElementById('btn-next').disabled = this.index === data.length - 1;);
         }
         toggle(label, el) { if (this.isSubmitted) return; if (this.selected.has(label)) { this.selected.delete(label); el.classList.remove('selected'); } else { this.selected.add(label); el.classList.add('selected'); } }
         submit() {
