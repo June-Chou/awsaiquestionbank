@@ -295,7 +295,7 @@
                 div.onclick = () => this.toggle(opt.label, div);
                 ob.appendChild(div);
             });
-            document.getElementById('btn-submit').disabled = false; document.getElementById('btn-prev').disabled = this.index === 0; document.getElementById('btn-next').disabled = this.index === data.length - 1;);
+            document.getElementById('btn-submit').disabled = false; document.getElementById('btn-prev').disabled = this.index === 0; document.getElementById('btn-next').disabled = this.index === data.length - 1;
         }
         toggle(label, el) { if (this.isSubmitted) return; if (this.selected.has(label)) { this.selected.delete(label); el.classList.remove('selected'); } else { this.selected.add(label); el.classList.add('selected'); } }
         submit() {
